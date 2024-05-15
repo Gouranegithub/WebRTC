@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boilerplate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+        <a class="navbar-brand" href="#">Demo WebRTC</a>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Réception</h2>
+                <video controls id="receiver-video" width="100%" height="400px"></video>
+                <p>
+                    <button id="start" class="btn btn-primary">Démarrer la conversation</button>
+                </p>
+                <textarea  id="offer" class="form-control"></textarea>
+            </div>
+            
+            <div class="col-sm-6">
+                <h2>Envoi</h2>
+                <video controls id="emitter-video" width="100%" height="400px"></video>
+                <p>
+                    <button id="receive" class="btn btn-primary">Recevoir la conversation</button>
+                </p>
+                <form id="incoming">
+                    <div class="form-group">
+                        <textarea  class="form-control"></textarea>
+                    </div>
+                        <p>
+                            <button type="submit">Enregistrer l'offer</button>
+                        </p>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="simplePeer.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
